@@ -33,3 +33,23 @@ Monthly summary per vehicle: number of rides, total kilometres driven, revenue g
 Robust validation (capacity, distance limits, time format, passenger numbers).
 
 Modular, well-documented codebase that uses inheritance, an abstract base vehicle class, at least one enum for category/time checks, and multiple cohesive classes.
+
+
+           +----------------+
+           |   Vehicle (A)  |<------------------------+
+           +----------------+                         |
+           | - regNumber    |                         |
+           | - make         |                         |
+           | - category     |                         |
+           | - totalKms     |                         |
+           +----------------+                         |
+             ^         ^         ^                    |
+             |         |         |                    |
++------------+   +-----+-----+ +--+------------+      |
+| ZoomerLite |   | ZoomerStd | | ZoomerPro    |      |
++------------+   +-----------+ +--------------+      |
+       |              |              |              |
+       +--------------+--------------+--------------+
+                      |
+                 fare logic
+
